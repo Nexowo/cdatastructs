@@ -9,6 +9,6 @@ typedef struct elem {
 
 typedef struct l {
 	element* head; /*Pointer on the head of the list*/
-	element* tail; /*Pointer on the head of the list*/
+	element* tail; /*Pointer on the tail of the list*/
 	int size; /*Size of the list*/
 } list;

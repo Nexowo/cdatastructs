@@ -1,11 +1,12 @@
 #include "plist.h"
 
-int main(int argc, char *argv) {
+int main(int argc, char **argv) {
     list *a = create();
     int x = 2;
     int *px = &x;
     a = append(a, &x);
-    px = (int*)pop(a);
-    printf("%d", x);
+    int *f = NULL;
+    f = (int*)pop(a);
+    printf("%d", *f);
     return 0;
 }

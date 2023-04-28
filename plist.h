@@ -12,3 +12,7 @@ typedef struct l {
 	element* tail; /*Pointer on the tail of the list*/
 	int size; /*Size of the list*/
 } list;
+
+list* create();
+list* append(list* l, void* val);
+void* pop(list *l);

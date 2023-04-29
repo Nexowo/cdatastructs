@@ -40,9 +40,23 @@ void* pop(list *l) {
     return val;
 }
 
-void destroy(list *l) {
+void destroy(list* l) {
     while (l->head!=NULL) {
         pop(l);
     }
     free(l);
+}
+
+int is_equal(list* l, list* t) {
+    if(l->size != t->size) {
+        return 0;
+    }
+
+    for(element *e=l->head, *f=t->head; e != NULL && f != NULL; e->next, f->next) {
+        if(f->val != e->val) {
+            return 0;
+        }
+    }
+
+    return 1;
 }

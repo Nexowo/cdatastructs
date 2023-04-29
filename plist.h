@@ -13,7 +13,7 @@ typedef struct l {
 	int size; /*Size of the list*/
 } list;
 
-list* create();
-list* append(list* l, void* val);
-void* pop(list *l);
-void destroy(list *l);
+list* create(); /*Creation of a new empty list*/
+list* append(list* l, void* val); /*Add a new element at the end of the list*/
+void* pop(list *l); /*Suppress the first element, free it and return the value*/
+void destroy(list *l); /*Free all the element of the list and the list itself*/

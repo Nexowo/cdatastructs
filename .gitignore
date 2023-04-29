@@ -48,8 +48,8 @@
 .tmp_versions/
 modules.order
 Module.symvers
+Mkfile.old
+dkms.conf
 
 #Environment files
 *.vscode
-Mkfile.old
-dkms.conf

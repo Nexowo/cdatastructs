@@ -4,7 +4,7 @@
 typedef struct elem {
 	struct elem* next; /*Pointer on the next element of the list*/
 	struct elem* prev; /*Pointer on the previous element of the list*/
-	void *val; /*Generic pointer on the data*/
+	void* val; /*Generic pointer on the data*/
 }element;
 
 typedef struct l {
@@ -16,3 +16,4 @@ typedef struct l {
 list* create();
 list* append(list* l, void* val);
 void* pop(list *l);
+void destroy(list *l);

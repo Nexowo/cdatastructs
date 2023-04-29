@@ -2,6 +2,9 @@
 
 list* create() {
     list *l = malloc(sizeof(list));
+    if (l == NULL) {
+        exit(2);
+    }
     l->head = NULL;
     l->tail = NULL;
     l->size = 0;
@@ -10,11 +13,14 @@ list* create() {
 
 list* append(list* l, void* val) {
     element *e = malloc(sizeof(element));
+    if (e == NULL) {
+        exit(3);
+    }
     e->val = val;
     if(!l->size) {
         l->head = e;
     }
-    l->size++;
+    ++l->size;
     e->next = NULL;
     e->prev = l->tail;
     l->tail = e;
@@ -31,4 +37,13 @@ void* pop(list *l) {
     void* val = temp->val;
     free(temp);
     return val;
+}
+
+void destroy(list *l) {
+    for (unsigned int i=0; i<l->size; ++i) {
+        element *t = l->head;
+        l->head = l->head->next;
+        free(t);
+    }
+    free(l);
 }

@@ -14,6 +14,7 @@ list* create() {
 list* append(list* l, void* val) {
     element *e = malloc(sizeof(element));
     if (e == NULL) {
+        destroy(l);
         exit(3);
     }
     e->val = val;

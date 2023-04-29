@@ -41,10 +41,8 @@ void* pop(list *l) {
 }
 
 void destroy(list *l) {
-    for (unsigned int i=0; i<l->size; ++i) {
-        element *t = l->head;
-        l->head = l->head->next;
-        free(t);
+    while (l->head!=NULL) {
+        pop(l);
     }
     free(l);
 }

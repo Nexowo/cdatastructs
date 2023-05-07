@@ -1,6 +1,6 @@
 #include "plist.h"
 
-list* create() {
+list* l_create() {
     list *l = malloc(sizeof(list));
     if (l == NULL) {
         exit(2);
@@ -28,7 +28,7 @@ list* append(list* l, void* val) {
     return l;
 }
 
-void* pop(list *l) {
+void* l_pop(list *l) {
     element *temp = l->head;
     --l->size;
     l->head = temp->next;
@@ -59,4 +59,19 @@ int is_equal(list* l, list* t) {
     }
 
     return 1;
+}
+
+void* get_at(list* l, unsigned int index) {
+    int i = 0;
+    element* e = l->head;
+    while (i<index && e != NULL)
+    {
+        ++i;
+        e = e->next;
+    }
+    if (e == NULL) {
+        printf("list index out of range");
+        return NULL;
+    }
+    return e->val;
 }

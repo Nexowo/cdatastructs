@@ -1,6 +1,6 @@
 # cdatastructs
 
-Personnal implementation of différent datastructures in c
+Personnal implementation of different datastructures in c
 
 To compile use:
 

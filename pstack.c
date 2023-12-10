@@ -18,7 +18,7 @@ stack* push(stack* s, void* value) {
     }
     e->prev = NULL;
     e->next = s->head;
-    if (!s->size){
+    if (s->size){
         s->head->prev = e;
     }
     ++s->size;

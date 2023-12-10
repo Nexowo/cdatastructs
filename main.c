@@ -14,11 +14,9 @@ int main(int argc, char **argv) {
     int x = 10;
     printf("Adding %d in the list\n", x);
     a = add_element(a,&x);
-    printf("%d\n", *(int *)(a->head->val));
     int y = 20;
     printf("Adding %d in the stack\n", y);
     b = add_element(b, &y);
-    printf("%d\n", *(int *)(b->head->val));
 
     int *f = NULL;
     f = (int*)l_pop(a);

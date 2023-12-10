@@ -8,4 +8,6 @@
 
 #define add_element(X, element) _Generic((X), list* : append, stack* : push)(X, element)
 
+#define delete(X) _Generic((X), list* : destroy, stack* : s_delete)(X)
+
 #endif

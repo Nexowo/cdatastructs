@@ -24,9 +24,9 @@ int main(int argc, char **argv) {
     f = (int *)pop(b);
     printf("poping %d from the stack\n\n", *f);
 
-    s_delete(b);
+    delete(b);
     printf("The stack has been fairly deleted ! \n");
-    destroy(a);
+    delete(a);
     printf("The list has been fairly deleted ! \n");
 
     return 0;

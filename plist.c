@@ -52,7 +52,7 @@ int is_equal(list* l, list* t) {
         return 0;
     }
 
-    for(element *e=l->head, *f=t->head; e != NULL && f != NULL; e->next, f->next) {
+    for(element *e=l->head, *f=t->head; e != NULL && f != NULL; e=e->next, f=f->next) {
         if(f->val != e->val) {
             return 0;
         }

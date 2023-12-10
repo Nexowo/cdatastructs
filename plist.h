@@ -13,7 +13,6 @@ list* l_create(); /*Creation of a new empty list*/
 list* append(list* l, void* val); /*Add a new element at the end of the list*/
 void* l_pop(list* l); /*Suppress the first element, free it and return the value*/
 void destroy(list* l); /*Free all the element of the list and the list itself*/
-int is_equal(list* l, list* t); /*Compare 2 lists and return {code 0} if they're different and {code 1} if they're the same*/
 void* get_at(list* l, unsigned int index); /*Return the element of the list at the index specified*/
 
 #endif

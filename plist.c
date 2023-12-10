@@ -47,20 +47,6 @@ void destroy(list* l) {
     free(l);
 }
 
-int is_equal(list* l, list* t) {
-    if(l->size != t->size) {
-        return 0;
-    }
-
-    for(element *e=l->head, *f=t->head; e != NULL && f != NULL; e=e->next, f=f->next) {
-        if(f->val != e->val) {
-            return 0;
-        }
-    }
-
-    return 1;
-}
-
 void* get_at(list* l, unsigned int index) {
     int i = 0;
     element* e = l->head;

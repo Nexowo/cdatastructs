@@ -42,7 +42,7 @@ void* l_pop(list *l) {
 
 void destroy(list* l) {
     while (l->head!=NULL) {
-        pop(l);
+        l_pop(l);
     }
     free(l);
 }

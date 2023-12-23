@@ -2,7 +2,7 @@
 
 list* l_create() {
     list *l = malloc(sizeof(list));
-    if (l == NULL) {
+    if (NULL == l) {
         exit(2);
     }
     l->head = NULL;
@@ -13,7 +13,7 @@ list* l_create() {
 
 list* append(list* l, void* val) {
     element *e = malloc(sizeof(element));
-    if (e == NULL) {
+    if (NULL == e) {
         destroy(l);
         exit(3);
     }
@@ -50,12 +50,12 @@ void destroy(list* l) {
 void* get_at(list* l, unsigned int index) {
     int i = 0;
     element* e = l->head;
-    while (i<index && e != NULL)
+    while (i<index && NULL != e)
     {
         ++i;
         e = e->next;
     }
-    if (e == NULL) {
+    if (NULL == e) {
         printf("list index out of range");
         return NULL;
     }

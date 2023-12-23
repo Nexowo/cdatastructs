@@ -2,7 +2,7 @@
 
 stack* s_create() {
     stack* s = malloc(sizeof(stack));
-    if (s == NULL) {
+    if (NULL == s) {
         exit(2);
     }
     s->head = NULL;
@@ -12,7 +12,7 @@ stack* s_create() {
 
 stack* push(stack* s, void* value) {
     element* e = malloc(sizeof(element));
-    if (e == NULL) {
+    if (NULL == e) {
         s_delete(s);
         exit(3);
     }
@@ -28,7 +28,7 @@ stack* push(stack* s, void* value) {
 }
 
 void* pop(stack* s) {
-    if (s->size == 0) {
+    if (0 == s->size) {
         return NULL;
     }
     element* e = s->head;
@@ -41,7 +41,7 @@ void* pop(stack* s) {
 
 void s_delete(stack* s) {
     element *e = s->head;
-    while (e != NULL) {
+    while (NULL != e) {
         s->head = e->next;
         free(e);
         e = s->head;
